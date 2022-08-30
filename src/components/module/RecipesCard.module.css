@@ -1,0 +1,78 @@
+.recipes-wrapper {
+  position: relative;
+  padding: 1rem;
+}
+
+.recipes-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.flags,
+.flags img {
+  width: 3rem !important;
+  height: 3rem !important;
+  border-radius: 50% !important;
+}
+
+.flags {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.flags img {
+  object-fit: cover;
+}
+
+.recipes-card {
+  border: 1px solid grey;
+  border-radius: 5px;
+  min-height: 100%;
+  /* position: relative; */
+}
+
+.recipes-card img {
+  width: 15rem;
+  border-radius: 5px 5px 0 0;
+}
+
+.recipes-text {
+  width: 15rem;
+  padding: 1rem;
+  padding-bottom: 2.5rem;
+  line-height: 1.5rem;
+}
+
+.description {
+  text-overflow: ellipsis !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.author {
+  margin: 0.5rem 0;
+  /* line-height: 1.5rem; */
+  text-overflow: ellipsis !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+span {
+  font-style: italic;
+}
+
+.link {
+  display: flex;
+  justify-content: space-between;
+}
+
+.link-more {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+}
+
+.btn-delete {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+}

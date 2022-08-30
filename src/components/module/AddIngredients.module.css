@@ -1,0 +1,14 @@
+.field {
+  width: 5rem !important;
+  margin-right: 1rem;
+}
+
+label {
+  width: 5rem !important;
+}
+.ingre-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 0.5rem;
+}
