@@ -15,8 +15,7 @@ pipeline {
     stage ("test") {
       steps {
         echo "testing my app..."
-        sh "pwd"
-        sh 'npm test'
+        sh 'npm run test'
       }
     }
     stage ("deploy") {
