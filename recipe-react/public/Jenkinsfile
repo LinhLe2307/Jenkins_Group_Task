@@ -4,16 +4,21 @@ pipeline{
         stage("build"){
             steps{
                 echo "building my app"
+                sh 'make' 
+                archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
             }
         }
         stage("test"){
             steps{
                 echo "testing my app"
+                 sh 'make check || true' 
+                junit '**/target/*.xml'
             }
         }
         stage("deploy"){
             steps{
                 echo "deploying my app"
+                sh 'make publish'
             }
         }
     }
