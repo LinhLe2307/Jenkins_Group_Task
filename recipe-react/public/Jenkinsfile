@@ -1,22 +1,25 @@
 pipeline{
     agent any
+
+    tools{nodejs "node"}
+
     stages{
         stage("build"){
-            steps{
+            steps {
                 echo "building my app"
-                sh 'make' 
-                archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+                sh 'npm install' 
+                
             }
         }
         stage("test"){
-            steps{
+            steps {
                 echo "testing my app"
-                 sh 'make check || true' 
-                junit '**/target/*.xml'
+                 sh 'npm test' 
+                
             }
         }
         stage("deploy"){
-            steps{
+            steps {
                 echo "deploying my app"
                 sh 'make publish'
             }
